@@ -4,6 +4,9 @@ import {Renderer} from "../core/renderer";
 
 export class PropertiesPanel {
     protected objects: ObjectData[];
+    setObjects(objects: ObjectData[]) {
+        this.objects = objects;
+    }
     protected selectedObject!: ObjectData;
     protected renderer: Renderer;
     protected canvas: HTMLCanvasElement;
@@ -21,10 +24,7 @@ export class PropertiesPanel {
 
         const { offsetX, offsetY } = event;
 
-        console.log(this.objects.length);
-
         this.selectedObject = this.getTopmostObject(offsetX, offsetY)!;
-        console.log(this.selectedObject);
 
         if (this.selectedObject) {
             this.showProperties();
@@ -99,18 +99,10 @@ export class PropertiesPanel {
         parametersList!.appendChild(deleteButton);
     }
 
-    protected getObjectByCoordinates(x: number, y: number): ObjectData | null {
-        for (const object of this.objects) {
-            if (this.isPointInsideObject(x, y, object)) {
-                return object;
-            }
-        }
-        return null;
-    }
-
     protected getTopmostObject(x: number, y: number): ObjectData | null {
         for(let i = this.objects.length - 1; i >= 0; i--) {
             const object = this.objects[i];
+            if (i === 0) continue;
 
             if(this.isPointInsideObject(x, y, object)) {
                 return object;

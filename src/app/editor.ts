@@ -143,6 +143,7 @@ export class GraphicEditor {
 
     loadData(jsonData: string) {
         this.objects = JSON.parse(jsonData);
+        this.propertiesPanel.setObjects(this.objects)
         this.renderer.redraw(this.objects);
     }
 }
