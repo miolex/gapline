@@ -1,5 +1,4 @@
 import {ObjectData, ObjectType} from "./object";
-import {Color} from "./color";
 
 export class Renderer {
     protected context: CanvasRenderingContext2D;

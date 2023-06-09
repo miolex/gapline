@@ -11,7 +11,7 @@ export interface Settings {
 
 export class SettingsPanel {
     settings: Settings;
-    onBackgroundColorUpdate: CallableFunction;
+    onBackgroundColorUpdate: CallableFunction = ()=>{};
 
     constructor() {
         this.settings = {

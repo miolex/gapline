@@ -13,11 +13,11 @@ function main() {
         document.getElementById("file-input")!.click();
     });
 
-    document.getElementById("save").addEventListener("click", () => {
+    document.getElementById("save")!.addEventListener("click", () => {
         editor.saveData();
     })
 
-    document.getElementById("export").addEventListener("click", () => {
+    document.getElementById("export")!.addEventListener("click", () => {
         editor.saveImage();
     })
 

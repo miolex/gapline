@@ -9,8 +9,7 @@ export class PropertiesPanel {
     }
     protected selectedObject!: ObjectData;
     protected renderer: Renderer;
-    protected canvas: HTMLCanvasElement;
-    protected objectToMove: ObjectData | null;
+    protected parametersList!: HTMLDivElement;
 
     constructor(objects: ObjectData[], renderer: Renderer) {
         this.objects = objects;
@@ -44,43 +43,14 @@ export class PropertiesPanel {
         const panelTitle = document.getElementById('panel-title')!;
         panelTitle.innerText = `${objectType}`;
 
-        const parametersList = document.getElementById('parameters-list')!;
-        parametersList.innerHTML = '';
+        this.parametersList = document.getElementById('parameters-list')! as HTMLDivElement;
+        this.parametersList.innerHTML = '';
 
-        for (const key in this.selectedObject) {
-            if (key !== 'type') {
-                const parameterContainer = document.createElement('div');
-                parameterContainer.className = 'parameter';
-
-                const parameterName = document.createElement('span');
-                parameterName.className = 'parameter-name';
-                parameterName.innerText = key.charAt(0).toUpperCase() + key.substring(1).toLowerCase();
-
-                const parameterValue = document.createElement('input');
-                let type = "string";
-                if (typeof (this.selectedObject as any)[key] === "number") {
-                    type = "number";
-                }
-
-                if (isColor((this.selectedObject as any)[key])) {
-                    type = "color";
-                }
-
-                parameterValue.type = type;
-                parameterValue.min = "0";
-                parameterValue.className = 'parameter-value';
-                parameterValue.value = (this.selectedObject as any)[key].toString();
-                parameterValue.addEventListener('input', () => {
-                    (this.selectedObject as any)[key] = parameterValue.type === "number" ? Number(parameterValue.value) : parameterValue.value;
-                    this.renderer.redraw(this.objects);
-                });
-
-                parameterContainer!.appendChild(parameterName);
-                parameterContainer!.appendChild(parameterValue);
-
-                parametersList!.appendChild(parameterContainer);
+        ["x1", "y1", "x2", "y2", "lineWidth", "pathColor", "fillColor"].forEach(
+            (k) => {
+                this.addProperty(k);
             }
-        }
+        )
 
         // Add delete button
         const deleteButton = document.createElement('button');
@@ -91,12 +61,59 @@ export class PropertiesPanel {
                 this.objects.splice(index, 1);
                 this.renderer.redraw(this.objects);
                 this.closeAllPopups();
-                parametersList.innerHTML = "";
+                this.parametersList.innerHTML = "";
                 panelTitle.innerText = "OBJECT";
             }
         });
 
-        parametersList!.appendChild(deleteButton);
+        this.parametersList!.appendChild(deleteButton);
+    }
+
+    protected addProperty(key: string) {
+        if (key !== 'type') {
+            const parameterContainer = document.createElement('div');
+            parameterContainer.className = 'parameter';
+
+            const parameterName = document.createElement('span');
+            parameterName.className = 'parameter-name';
+            parameterName.innerText = key.charAt(0).toUpperCase() + key.substring(1).toLowerCase();
+
+            switch (parameterName.innerText) {
+                case "Fillcolor":
+                    parameterName.innerText = "Fill Color";
+                    break;
+                case "Pathcolor":
+                    parameterName.innerText = "Path Color";
+                    break;
+                case "Linewidth":
+                    parameterName.innerText = "Line Width";
+                    break;
+            }
+
+            const parameterValue = document.createElement('input');
+            let type = "string";
+            if (typeof (this.selectedObject as any)[key] === "number") {
+                type = "number";
+            }
+
+            if (isColor((this.selectedObject as any)[key])) {
+                type = "color";
+            }
+
+            parameterValue.type = type;
+            parameterValue.min = "0";
+            parameterValue.className = 'parameter-value';
+            parameterValue.value = (this.selectedObject as any)[key].toString();
+            parameterValue.addEventListener('input', () => {
+                (this.selectedObject as any)[key] = parameterValue.type === "number" ? Number(parameterValue.value) : parameterValue.value;
+                this.renderer.redraw(this.objects);
+            });
+
+            parameterContainer!.appendChild(parameterName);
+            parameterContainer!.appendChild(parameterValue);
+
+            this.parametersList!.appendChild(parameterContainer);
+        }
     }
 
     protected getTopmostObject(x: number, y: number): ObjectData | null {
@@ -146,8 +163,7 @@ export class PropertiesPanel {
         return distance <= radius;
     }
 
-    protected area(x1, y1, x2, y2, x3, y3)
-    {
+    protected area(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number): number {
         return Math.abs((x1*(y2-y3) + x2*(y3-y1)+ x3*(y1-y2))/2.0);
     }
 

@@ -123,8 +123,10 @@ export class GraphicEditor {
         const filename = "data.json";
 
         const blob = new Blob([jsonData], { type: "application/json" });
+        //@ts-ignore
         if (window.navigator && window.navigator.msSaveOrOpenBlob) {
             // Для Internet Explorer або Microsoft Edge
+            //@ts-ignore
             window.navigator.msSaveOrOpenBlob(blob, filename);
         } else {
             // Інші браузери
