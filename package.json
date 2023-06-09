@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "prod": "tsc && vite build --config gp.config.ts",
     "preview": "vite preview"
   },
   "devDependencies": {
