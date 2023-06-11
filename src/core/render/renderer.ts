@@ -1,16 +1,15 @@
-import {ObjectData, ObjectType} from "./object";
+import {ObjectData, ObjectType} from "../types/object";
+import {AppConfig} from "../../misc/app.config";
 
 export class Renderer {
     protected context: CanvasRenderingContext2D;
-    protected canvas: HTMLCanvasElement;
 
-    constructor(ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) {
+    constructor(ctx: CanvasRenderingContext2D) {
         this.context = ctx;
-        this.canvas = canvas;
     }
 
     clear() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.context.clearRect(0, 0, AppConfig.Screen.Width, AppConfig.Screen.Height);
     }
 
     redraw(objects: ObjectData[]) {
@@ -63,7 +62,6 @@ export class Renderer {
         const y1 = object.y1 - object.y2;
         const radius = Math.sqrt(x1 * x1 + y1 * y1) / 2
 
-        // Визначаємо координати центру кола
         const centerX = object.x2 + x1 / 2;
         const centerY = object.y2 + y1 / 2;
 
