@@ -5,7 +5,6 @@ import {App} from "./app/app";
 window.addEventListener("load", main);
 
 function main() {
-    setUpPanels();
     new App();
 }
 

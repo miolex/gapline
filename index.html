@@ -4,33 +4,36 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>GapLine</title>
   </head>
   <body>
-    <div id="app">
-      <div id="panel-container" class="panel-container">
-        <div class="panel-container-header" id="panel-container-header"></div>
-        <div class="panel-title" id="panel-title">OBJECT</div>
-        <div class="parameters-list" id="parameters-list">
-          <!-- Параметри об'єкта будуть додаватися динамічно -->
-        </div>
-      </div>
+  <div class="wrapper">
+    <div class="panels">
       <div id="settings-panel-container" class="panel-container">
-        <div class="panel-container-header" id="settings-panel-container-header"></div>
         <div class="panel-title">SETTINGS</div>
         <div class="parameters-list">
-          <!-- Параметри об'єкта будуть додаватися динамічно -->
         </div>
       </div>
+    </div>
+    <div class="panels" id="app">
       <canvas width="1024" height="768" id="canvas"></canvas>
-      <button id="clear" class="btn">CLEAR</button>
-      <div>
-        <button id="load" class="btn">LOAD</button>
-        <input id="file-input" type="file" name="name" style="display: none;" />
-        <button id="save" class="btn">SAVE</button>
-        <button id="export" class="btn">EXPORT</button>
+    </div>
+    <div class="panels">
+      <div id="panel-container" class="panel-container">
+        <div class="panel-title" id="panel-title">OBJECT</div>
+        <div class="parameters-list" id="parameters-list">
+        </div>
       </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+    <div class="controls">
+      <button id="clear" class="btn">CLEAR</button>
+      <button id="load" class="btn">LOAD</button>
+      <input id="file-input" type="file" name="name" style="display: none;" />
+      <button id="save" class="btn">SAVE</button>
+      <button id="export" class="btn">EXPORT</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
