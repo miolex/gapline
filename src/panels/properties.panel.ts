@@ -136,7 +136,8 @@ export class PropertiesPanel {
     }
 
     protected updateParameter(event: Event, key: string) {
-        (this.selectedObject as any)[key] = (event.target as HTMLInputElement).value;
+        let value = (event.target as HTMLInputElement).value;
+        (this.selectedObject as any)[key] = isNaN(Number(value)) ? value : Number(value);
         this.renderer.redraw(this.objects);
     }
 }
