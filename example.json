@@ -1,0 +1,262 @@
+[
+    {
+        "type": 0,
+        "fillColor": "#b3faff",
+        "pathColor": "#000000",
+        "x1": 0,
+        "lineWidth": 0,
+        "y2": 768,
+        "x2": 1024,
+        "y1": 0
+    },
+    {
+        "x2": 1,
+        "y2": 480,
+        "type": 0,
+        "x1": 1,
+        "y1": 480,
+        "fillColor": "#67d073",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 1022,
+        "y2": 765,
+        "type": 0,
+        "x1": 1,
+        "y1": 428,
+        "fillColor": "#67d073",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 665,
+        "y2": 541,
+        "type": 0,
+        "x1": 357,
+        "y1": 322,
+        "fillColor": "#ff9980",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 701,
+        "y2": 325,
+        "type": 2,
+        "x1": 319,
+        "y1": 129,
+        "fillColor": "#c2bab7",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 469,
+        "y2": 456,
+        "type": 0,
+        "x1": 392,
+        "y1": 385,
+        "fillColor": "#c9e9e8",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 583,
+        "y2": 540,
+        "type": 0,
+        "x1": 532,
+        "y1": 430,
+        "fillColor": "#532013",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 587,
+        "y2": 766,
+        "type": 0,
+        "x1": 533,
+        "y1": 540,
+        "fillColor": "#987971",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 428,
+        "y2": 456,
+        "type": 3,
+        "x1": 429,
+        "y1": 384,
+        "fillColor": "#d1431f",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 554,
+        "y2": 487,
+        "type": 3,
+        "x1": 538,
+        "y1": 488,
+        "fillColor": "#d1431f",
+        "pathColor": "#000000",
+        "lineWidth": 5
+    },
+    {
+        "x2": 151.5,
+        "y2": 160,
+        "type": 1,
+        "x1": 61.5,
+        "y1": 31,
+        "fillColor": "#ffffff",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 126.5,
+        "y2": 132,
+        "type": 1,
+        "x1": 250.5,
+        "y1": 52,
+        "fillColor": "#ffffff",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 764.5,
+        "y2": 104,
+        "type": 1,
+        "x1": 708.5,
+        "y1": 49,
+        "fillColor": "#ffffff",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 863.5,
+        "y2": 77,
+        "type": 1,
+        "x1": 752.5,
+        "y1": 29,
+        "fillColor": "#ffffff",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 832.5,
+        "y2": 93,
+        "type": 1,
+        "x1": 939.5,
+        "y1": 72,
+        "fillColor": "#ffffff",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 86.5,
+        "y2": 479,
+        "type": 0,
+        "x1": 69.5,
+        "y1": 348,
+        "fillColor": "#763205",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 873.5,
+        "y2": 494,
+        "type": 0,
+        "x1": 854.5,
+        "y1": 328,
+        "fillColor": "#763205",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 101.5,
+        "y2": 386,
+        "type": 1,
+        "x1": 52.5,
+        "y1": 236,
+        "fillColor": "#297f38",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 910.5,
+        "y2": 406,
+        "type": 1,
+        "x1": 829.5,
+        "y1": 241,
+        "fillColor": "#14853a",
+        "pathColor": "#000000",
+        "lineWidth": 1
+    },
+    {
+        "x2": 152.5,
+        "y2": 621,
+        "type": 1,
+        "x1": 64.5,
+        "y1": 560,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 359.5,
+        "y2": 697,
+        "type": 1,
+        "x1": 232.5,
+        "y1": 647,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 947.5,
+        "y2": 708,
+        "type": 1,
+        "x1": 800.5,
+        "y1": 628,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 728.5,
+        "y2": 694,
+        "type": 1,
+        "x1": 638.5,
+        "y1": 630,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 756.5,
+        "y2": 509,
+        "type": 1,
+        "x1": 746.5,
+        "y1": 494,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 982.5,
+        "y2": 522,
+        "type": 1,
+        "x1": 946.5,
+        "y1": 489,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    },
+    {
+        "x2": 290.5,
+        "y2": 539,
+        "type": 1,
+        "x1": 209.5,
+        "y1": 469,
+        "fillColor": "#6ed889",
+        "pathColor": "#000000",
+        "lineWidth": 0
+    }
+]
