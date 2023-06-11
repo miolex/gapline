@@ -7,7 +7,6 @@ export enum ObjectType {
     LINE
 }
 
-// Оголошення типу для збереження об'єкту
 export interface ObjectData {
     type: ObjectType;
     x1: number;
